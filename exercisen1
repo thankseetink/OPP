@@ -1,0 +1,79 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+class Kylian {
+	public:
+		string position;
+		int poss, quick, speed, accelebration;
+		Kylian (string vitri, int chiemhuu, int phancongnhanh, int tocdo, int buttoc) {
+			cout << "-----PLAYER OF THE WEEK-----" << endl;
+			position = vitri;
+			poss = chiemhuu;
+			quick = phancongnhanh;
+			speed = tocdo;
+			accelebration = buttoc;
+		}
+		void display () {cout << position << " " << poss << " "<< quick << " " << speed << " " << accelebration << endl;}
+	};
+	//Kylian
+class SinhVien {
+	public:
+		string name, id, rank;
+		void introduce();
+		void hello ();
+		SinhVien (string ten, string ms, string hang){
+			cout << "Hello" << endl;
+			name=ten;
+			id=ms;
+			rank=hang;	
+		}
+		void display () {cout << name << " " << id << " " << rank << endl;}
+};
+void SinhVien::introduce() {
+	cout << "-----Open Univerity student-----" << endl;
+}
+void SinhVien::hello() {
+	cout << "-----Information Technology department-----" << endl;
+}
+	//SV
+class HighRoom {
+	public:
+		int bedroom, bathroom;
+		string bed,apartment;
+		HighRoom (int pngu, int ptam, string giuong, string apart) {
+			cout << "-----PRESIDENT ROOM-----" << endl;
+			bedroom=pngu;
+			bathroom=ptam;
+			bed=giuong;
+			apartment=apart;
+		}
+		void display () {cout << bedroom << " " <<bathroom << " "<<bed << " "<< apartment << endl;}
+};
+	//HR
+class LowRoom {
+	public:
+		int bedroom, bathroom, levelofhouse;
+		string cushion;
+		LowRoom (int pngu, int ptam, int capdonha, string dem) {
+			cout << "-----LOW ROOM-----" << endl;
+			bedroom=pngu;
+			bathroom=ptam;
+			levelofhouse=capdonha;
+			cushion=dem;
+		}
+		void display () {cout << bedroom << " "<< bathroom << " "<< levelofhouse << " " << cushion << endl;}
+};
+int main () {
+	Kylian x=Kylian ("CF",90,90,93,90);
+	x.display();
+	SinhVien y=SinhVien("Dan", "2251010083","top 1 trong long Dan");
+	SinhVien y2=SinhVien("Thanh", "2251010083","top 1 trong long Thanh");
+	y.introduce();
+	y.hello();
+	y.display();
+	y2.display();
+	HighRoom z=HighRoom (5,5,"A+","Thousand Stars");
+	z.display();
+	LowRoom t=LowRoom (5,5,5,"A+");
+	t.display()	;
+}
